@@ -216,9 +216,8 @@ document.addEventListener('DOMContentLoaded', function() {
             modalImage.src = equipment.image;
             modalImage.alt = equipment.title;
         }
-        if (modalDescription) modalDescription.textContent = equipment.description;
-        if (modalWhatsapp) {
-            modalWhatsapp.href = `tel:+5511946394121`;
+        if (modalDescription) modalDescription.textContent = equipment.description;        if (modalWhatsapp) {
+            modalWhatsapp.href = `https://wa.me/5511946394121?text=Olá! Quero locar o equipamento ${equipment.title}`;
         }
 
         modal.style.display = 'block';

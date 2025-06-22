@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h3>${service.nome}</h3>
                 <div class="service-price">${service.preco}</div>
                 <p>${service.descricao}</p>
-                <a href="tel:+5511946394121" class="btn btn-primary" target="_blank">
+                <a href="https://wa.me/5511946394121?text=Olá! Quero agendar ${service.nome}" class="btn btn-primary" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     Agendar Agora
                 </a>
