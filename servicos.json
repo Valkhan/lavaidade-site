@@ -55,61 +55,61 @@
       "nome": "I-Lipo",
       "descricao": "Lipólise a laser de baixa intensidade que estimula a liberação natural de gordura das células adiposas. Procedimento não invasivo e indolor para redução de medidas e contorno corporal.",
       "preco": "R$ 100",
-      "imagem": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/ilipo-laser-lipólise.jpg"
     },
     {
       "nome": "Eletroterapia",
       "descricao": "Tratamento que utiliza correntes elétricas de baixa frequência para tonificar músculos, melhorar circulação e reduzir dores. Ideal para reabilitação e fortalecimento muscular.",
       "preco": "R$ 100",
-      "imagem": "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/eletroterapia-corrente-eletrica.jpeg"
     },
     {
       "nome": "Radiofrequência",
       "descricao": "Tratamento que utiliza ondas eletromagnéticas para aquecer as camadas profundas da pele, estimulando a produção de colágeno e promovendo firmeza e rejuvenescimento.",
       "preco": "R$ 100",
-      "imagem": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/radiofrequencia-rejuvenescimento.png"
     },
     {
       "nome": "Massagem com ventosa",
       "descricao": "Técnica milenar que utiliza ventosas para criar sucção na pele, melhorando a circulação sanguínea, reduzindo celulite e aliviando tensões musculares.",
       "preco": "R$ 160",
-      "imagem": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/massagem-ventosa-circulacao.webp"
     },
     {
       "nome": "Lipocavitação",
       "descricao": "Procedimento que utiliza ultrassom de baixa frequência para quebrar células de gordura localizada, facilitando sua eliminação natural pelo organismo.",
       "preco": "R$ 100",
-      "imagem": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/lipocavitacao-ultrassom-gordura.webp"
     },
     {
       "nome": "Ulthera",
       "descricao": "Tratamento com ultrassom microfocado para lifting facial não cirúrgico. Estimula a produção de colágeno nas camadas profundas, proporcionando firmeza e rejuvenescimento natural.",
       "preco": "R$ 2,50 por disparo",
-      "imagem": "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/ulthera-ultrassom-facial.jpg"
     },
     {
       "nome": "Drenagem linfática",
       "descricao": "Massagem terapêutica suave que estimula o sistema linfático, reduzindo inchaços, melhorando a circulação e eliminando toxinas do organismo. Ideal para pós-operatório.",
       "preco": "R$ 120",
-      "imagem": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/drenagem-linfatica-massagem.webp"
     },
     {
       "nome": "Limpeza de pele",
       "descricao": "Procedimento facial profundo que remove impurezas, cravos e células mortas. Inclui esfoliação, extração, hidratação e aplicação de máscara específica para cada tipo de pele.",
       "preco": "R$ 150",
-      "imagem": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/limpeza-pele-facial.jpg"
     },
     {
       "nome": "Criolipólise",
       "descricao": "Procedimento que utiliza resfriamento controlado para eliminar células de gordura localizada de forma definitiva. Tecnologia não invasiva com resultados duradouros.",
       "preco": "R$ 150 por acoplada",
-      "imagem": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/criolipolise-procedimento-gordura.jpg"
     },
     {
       "nome": "Vácuoterapia",
       "descricao": "Tratamento que utiliza sucção controlada para melhorar a circulação sanguínea e linfática, reduzir celulite e promover o contorno corporal. Ideal para modelagem corporal.",
       "preco": "R$ 100",
-      "imagem": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "imagem": "img/servicos/procedimentos/vacuoterapia-succao-modelagem.jpg"
     }
   ]
 }
