@@ -1,13 +1,110 @@
 // Services Page JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Carregar dados dos procedimentos
+    loadProcedimentos();
+    
     // Filter functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const serviceCards = document.querySelectorAll('.service-detail-card');
-    const categoryTitles = document.querySelectorAll('.category-title');
+
+    // Add click event listeners to filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Get the category
+            const category = this.getAttribute('data-category');
+            
+            // Filter services
+            filterServices(category);
+        });
+    });
+
+    // Função para carregar procedimentos do JSON
+    async function loadProcedimentos() {
+        try {
+            const response = await fetch('servicos.json');
+            const data = await response.json();
+            
+            const container = document.getElementById('procedimentos-container');
+            container.innerHTML = '';
+            
+            // Criar seção de procedimentos
+            const procedimentosSection = document.createElement('div');
+            procedimentosSection.innerHTML = `
+                <h2 class="category-title">Procedimentos Estéticos</h2>
+                <div class="services-grid" id="procedimentos-grid">
+                </div>
+            `;
+            
+            const procedimentosGrid = procedimentosSection.querySelector('#procedimentos-grid');
+            
+            // Adicionar cada procedimento
+            data.procedimentos.forEach((procedimento, index) => {
+                const card = createServiceCard(procedimento, 'procedimentos', index);
+                procedimentosGrid.appendChild(card);
+            });
+            
+            container.appendChild(procedimentosSection);
+            
+        } catch (error) {
+            console.error('Erro ao carregar procedimentos:', error);
+        }
+    }
+    
+    // Função para criar um card de serviço
+    function createServiceCard(service, type, index) {
+        const card = document.createElement('div');
+        card.className = 'service-detail-card';
+        
+        // Definir categoria baseada no tipo de procedimento
+        let category = 'procedimentos';
+        if (service.nome.includes('Limpeza') || service.nome.includes('Ulthera')) {
+            category = 'facial';
+        } else if (service.nome.includes('Criolipólise') || service.nome.includes('Lipocavitação') || service.nome.includes('I-Lipo') || service.nome.includes('Drenagem')) {
+            category = 'emagrecimento';
+        } else if (service.nome.includes('Radiofrequência')) {
+            category = 'rejuvenescimento';
+        } else {
+            category = 'corporal';
+        }
+        
+        card.setAttribute('data-category', category);
+        
+        // Definir badges especiais
+        let badge = '';
+        if (index === 0) badge = '<div class="service-badge">Mais Procurado</div>';
+        else if (index === 1) badge = '<div class="service-badge">Novo</div>';
+        else if (service.nome === 'Ulthera') badge = '<div class="service-badge">Premium</div>';
+        
+        card.innerHTML = `
+            <div class="service-image">
+                <img src="${service.imagem}" alt="${service.nome}" loading="lazy">
+                ${badge}
+            </div>
+            <div class="service-content">
+                <h3>${service.nome}</h3>
+                <div class="service-price">${service.preco}</div>
+                <p>${service.descricao}</p>
+                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar ${service.nome}" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Agendar Agora
+                </a>
+            </div>
+        `;
+        
+        return card;
+    }
 
     // Filter services by category
     function filterServices(category) {
+        const serviceCards = document.querySelectorAll('.service-detail-card');
+        const categoryTitles = document.querySelectorAll('.category-title');
+
         serviceCards.forEach(card => {
             const cardCategory = card.getAttribute('data-category');
             
@@ -32,7 +129,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } else {
             categoryTitles.forEach(title => {
-                const titleId = title.closest('.category-section').id;
+                const section = title.closest('.category-section');
+                const titleId = section ? section.id : null;
                 if (titleId === category) {
                     title.style.display = 'block';
                 } else {
@@ -42,70 +140,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Add click event listeners to filter buttons
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Get category and filter
-            const category = this.getAttribute('data-category');
-            filterServices(category);
-            
-            // Scroll to services section
-            const servicesSection = document.querySelector('.services-grid-section');
-            if (servicesSection) {
-                servicesSection.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // Smooth scrolling for category anchors
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const filtersHeight = document.querySelector('.services-categories').offsetHeight;
-                const totalOffset = headerHeight + filtersHeight + 20;
-                
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - totalOffset;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Search functionality (can be added later)
-    function createSearchBox() {
-        const searchContainer = document.createElement('div');
-        searchContainer.className = 'search-container';
-        searchContainer.innerHTML = `
-            <div class="search-box">
-                <input type="text" id="serviceSearch" placeholder="Buscar procedimento...">
-                <i class="fas fa-search"></i>
-            </div>
-        `;
-        
-        const filtersContainer = document.querySelector('.category-filters');
-        filtersContainer.parentNode.insertBefore(searchContainer, filtersContainer.nextSibling);
-        
-        // Add search functionality
-        const searchInput = document.getElementById('serviceSearch');
+    // Search functionality
+    const searchInput = document.getElementById('service-search');
+    if (searchInput) {
         searchInput.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
+            const serviceCards = document.querySelectorAll('.service-detail-card');
             
             serviceCards.forEach(card => {
                 const serviceName = card.querySelector('h3').textContent.toLowerCase();
@@ -113,248 +153,49 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (serviceName.includes(searchTerm) || serviceDescription.includes(searchTerm)) {
                     card.style.display = 'block';
-                    card.classList.remove('hidden');
                 } else {
                     card.style.display = 'none';
-                    card.classList.add('hidden');
                 }
             });
         });
     }
 
-    // Intersection Observer for card animations
+    // Smooth scroll to sections
+    const categoryLinks = document.querySelectorAll('a[href^="#"]');
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Animation on scroll
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const cardObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate-in');
             }
         });
     }, observerOptions);
 
     // Observe service cards for animation
-    serviceCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        cardObserver.observe(card);
-    });
-
-    // Service card hover effects
-    serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-
-    // Price comparison feature
-    function createPriceComparison() {
-        const prices = [];
+    setTimeout(() => {
+        const serviceCards = document.querySelectorAll('.service-detail-card');
         serviceCards.forEach(card => {
-            const priceElement = card.querySelector('.service-price');
-            if (priceElement) {
-                const priceText = priceElement.textContent;
-                const priceMatch = priceText.match(/R\$\s*(\d+)/);
-                if (priceMatch) {
-                    prices.push(parseInt(priceMatch[1]));
-                }
-            }
+            observer.observe(card);
         });
-        
-        if (prices.length > 0) {
-            const minPrice = Math.min(...prices);
-            const maxPrice = Math.max(...prices);
-            
-            // Add price badges
-            serviceCards.forEach(card => {
-                const priceElement = card.querySelector('.service-price');
-                if (priceElement) {
-                    const priceText = priceElement.textContent;
-                    const priceMatch = priceText.match(/R\$\s*(\d+)/);
-                    if (priceMatch) {
-                        const price = parseInt(priceMatch[1]);
-                        if (price === minPrice) {
-                            const badge = document.createElement('div');
-                            badge.className = 'service-badge price-badge';
-                            badge.textContent = 'Melhor Preço';
-                            badge.style.background = '#28a745';
-                            card.querySelector('.service-image').appendChild(badge);
-                        }
-                    }
-                }
-            });
-        }
-    }
-
-    // Call price comparison
-    createPriceComparison();
-
-    // Load more services functionality (for future expansion)
-    function createLoadMoreButton() {
-        if (serviceCards.length > 6) {
-            // Hide services after the 6th one
-            serviceCards.forEach((card, index) => {
-                if (index >= 6) {
-                    card.style.display = 'none';
-                    card.classList.add('load-more-hidden');
-                }
-            });
-
-            // Create load more button
-            const loadMoreContainer = document.createElement('div');
-            loadMoreContainer.className = 'load-more-container';
-            loadMoreContainer.innerHTML = `
-                <button class="btn btn-outline load-more-btn">
-                    <i class="fas fa-plus"></i>
-                    Ver Mais Procedimentos
-                </button>
-            `;
-
-            const servicesSection = document.querySelector('.services-grid-section .container');
-            servicesSection.appendChild(loadMoreContainer);
-
-            // Add click event to load more button
-            const loadMoreBtn = document.querySelector('.load-more-btn');
-            loadMoreBtn.addEventListener('click', function() {
-                const hiddenCards = document.querySelectorAll('.load-more-hidden');
-                hiddenCards.forEach((card, index) => {
-                    setTimeout(() => {
-                        card.style.display = 'block';
-                        card.classList.remove('load-more-hidden');
-                        card.classList.add('fade-in');
-                    }, index * 100);
-                });
-                
-                this.parentElement.style.display = 'none';
-            });
-        }
-    }
-
-    // URL hash handling for direct category access
-    function handleUrlHash() {
-        const hash = window.location.hash.substring(1);
-        if (hash && ['facial', 'corporal', 'emagrecimento', 'rejuvenescimento'].includes(hash)) {
-            // Update filter
-            filterButtons.forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('data-category') === hash) {
-                    btn.classList.add('active');
-                }
-            });
-            
-            // Filter services
-            filterServices(hash);
-            
-            // Scroll to category
-            setTimeout(() => {
-                const targetElement = document.getElementById(hash);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }, 100);
-        }
-    }
-
-    // Handle hash on page load
-    handleUrlHash();
-
-    // Handle hash changes
-    window.addEventListener('hashchange', handleUrlHash);
-
-    // WhatsApp message customization
-    const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
-    whatsappButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            // Add loading state
-            const originalContent = this.innerHTML;
-            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Redirecionando...';
-            
-            setTimeout(() => {
-                this.innerHTML = originalContent;
-            }, 2000);
-        });
-    });
-
-    // Performance: Lazy load service images
-    const serviceImages = document.querySelectorAll('.service-image img');
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
-                }
-            }
-        });
-    });
-
-    serviceImages.forEach(img => {
-        if (img.dataset.src) {
-            imageObserver.observe(img);
-        }
-    });
-
-    // Analytics tracking (can be integrated with Google Analytics)
-    function trackServiceInteraction(serviceName, action) {
-        // Example for Google Analytics
-        if (typeof gtag !== 'undefined') {
-            gtag('event', action, {
-                'event_category': 'Services',
-                'event_label': serviceName
-            });
-        }
-        
-        // Console log for debugging
-        console.log(`Service interaction: ${action} - ${serviceName}`);
-    }
-
-    // Track service card clicks
-    serviceCards.forEach(card => {
-        const serviceName = card.querySelector('h3').textContent;
-        
-        card.addEventListener('click', function() {
-            trackServiceInteraction(serviceName, 'card_click');
-        });
-        
-        const whatsappBtn = card.querySelector('.btn');
-        if (whatsappBtn) {
-            whatsappBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                trackServiceInteraction(serviceName, 'whatsapp_click');
-            });
-        }
-    });
-
-    // Track filter usage
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            trackServiceInteraction(category, 'filter_click');
-        });
-    });
-
-    console.log('Services page loaded successfully!');
+    }, 1000);
 });
-
-// Export functions for external use
-window.ServicesPage = {
-    filterServices: function(category) {
-        // Allow external filtering
-        const event = new CustomEvent('filterServices', { detail: { category } });
-        document.dispatchEvent(event);
-    }
-};
