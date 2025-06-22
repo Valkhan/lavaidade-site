@@ -5,6 +5,49 @@ const backToTop = document.getElementById('backToTop');
 const testimonialDots = document.querySelectorAll('.dot');
 const testimonialCards = document.querySelectorAll('.testimonial-card');
 
+// Carregar dados do JSON e atualizar imagens na página inicial
+document.addEventListener('DOMContentLoaded', function() {
+    loadHomeServices();
+});
+
+// Função para carregar serviços na página inicial
+async function loadHomeServices() {
+    try {
+        const response = await fetch('servicos.json');
+        const data = await response.json();
+        
+        // Atualizar cards de serviços com dados do JSON
+        const serviceCards = document.querySelectorAll('.service-card');
+        const procedimentos = data.procedimentos;
+        
+        // Mapear procedimentos para os cards existentes
+        const serviceMapping = [
+            { card: 0, service: procedimentos.find(p => p.nome.includes('Limpeza')) },
+            { card: 1, service: procedimentos.find(p => p.nome.includes('Criolipólise')) },
+            { card: 2, service: procedimentos.find(p => p.nome.includes('Radiofrequência')) },
+            { card: 3, service: procedimentos.find(p => p.nome.includes('Drenagem') || p.nome.includes('Massagem')) }
+        ];
+        
+        serviceMapping.forEach(mapping => {
+            if (mapping.service && serviceCards[mapping.card]) {
+                const card = serviceCards[mapping.card];
+                const img = card.querySelector('img');
+                const title = card.querySelector('h3');
+                const description = card.querySelector('p');
+                const price = card.querySelector('.service-price');
+                
+                if (img) img.src = mapping.service.imagem;
+                if (title) title.textContent = mapping.service.nome;
+                if (description) description.textContent = mapping.service.descricao;
+                if (price) price.textContent = `A partir de ${mapping.service.preco}`;
+            }
+        });
+        
+    } catch (error) {
+        console.error('Erro ao carregar serviços:', error);
+    }
+}
+
 // Mobile Navigation Toggle
 navToggle?.addEventListener('click', () => {
     navMenu.classList.toggle('active');

@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (modalDescription) modalDescription.textContent = equipment.description;
         if (modalWhatsapp) {
-            modalWhatsapp.href = `https://wa.me/5511999999999?text=${encodeURIComponent(equipment.whatsappText)}`;
+            modalWhatsapp.href = `tel:+5511946394121`;
         }
 
         modal.style.display = 'block';
