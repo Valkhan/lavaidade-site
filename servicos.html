@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimentos Estéticos - La Vaidade</title>
+    <meta name="description" content="Tratamentos estéticos faciais, corporais, emagrecimento e rejuvenescimento na La Vaidade. Agende seu procedimento!">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="assets/logo.png" alt="La Vaidade" class="logo">
+                    <span class="brand-name">La Vaidade</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="servicos.html" class="nav-link active">Procedimentos</a></li>
+                        <li><a href="equipamentos.html" class="nav-link">Equipamentos</a></li>
+                        <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Agendar
+                    </a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-background">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Procedimentos Estéticos</h1>
+                <p>Tratamentos personalizados para realçar sua beleza natural</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Início</a>
+                    <span>/</span>
+                    <span>Procedimentos</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Categories -->
+    <section class="services-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="facial">Tratamentos Faciais</button>
+                <button class="filter-btn" data-category="corporal">Tratamentos Corporais</button>
+                <button class="filter-btn" data-category="emagrecimento">Emagrecimento</button>
+                <button class="filter-btn" data-category="rejuvenescimento">Rejuvenescimento</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid-section">
+        <div class="container">
+            <!-- Tratamentos Faciais -->
+            <div class="category-section" id="facial">
+                <h2 class="category-title">Tratamentos Faciais</h2>
+                <div class="services-grid">
+                    <div class="service-detail-card" data-category="facial">
+                        <div class="service-image">
+                            <img src="assets/limpeza-facial-profunda.jpg" alt="Limpeza Facial Profunda">
+                            <div class="service-badge">Mais Procurado</div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Limpeza Facial Profunda</h3>
+                            <div class="service-price">A partir de R$ 120</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                60 minutos
+                            </div>
+                            <p>Remove impurezas, cravos e células mortas, proporcionando hidratação e luminosidade para sua pele.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Remove cravos e impurezas</li>
+                                <li><i class="fas fa-check"></i> Hidratação profunda</li>
+                                <li><i class="fas fa-check"></i> Renovação celular</li>
+                                <li><i class="fas fa-check"></i> Pele mais luminosa</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Limpeza Facial Profunda" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-card" data-category="facial">
+                        <div class="service-image">
+                            <img src="assets/peeling-quimico.jpg" alt="Peeling Químico">
+                        </div>
+                        <div class="service-content">
+                            <h3>Peeling Químico</h3>
+                            <div class="service-price">A partir de R$ 200</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                45 minutos
+                            </div>
+                            <p>Renovação da pele através de ácidos controlados, ideal para manchas, rugas finas e textura irregular.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Reduz manchas</li>
+                                <li><i class="fas fa-check"></i> Suaviza rugas finas</li>
+                                <li><i class="fas fa-check"></i> Melhora textura da pele</li>
+                                <li><i class="fas fa-check"></i> Estimula renovação celular</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um Peeling Químico" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-card" data-category="facial">
+                        <div class="service-image">
+                            <img src="assets/microagulhamento.jpg" alt="Microagulhamento">
+                        </div>
+                        <div class="service-content">
+                            <h3>Microagulhamento</h3>
+                            <div class="service-price">A partir de R$ 250</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                90 minutos
+                            </div>
+                            <p>Estimula a produção natural de colágeno para reduzir cicatrizes, rugas e melhorar a firmeza da pele.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Reduz cicatrizes de acne</li>
+                                <li><i class="fas fa-check"></i> Diminui rugas e linhas</li>
+                                <li><i class="fas fa-check"></i> Melhora firmeza</li>
+                                <li><i class="fas fa-check"></i> Estimula colágeno</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um Microagulhamento" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-card" data-category="facial">
+                        <div class="service-image">
+                            <img src="assets/hidrafacial.jpg" alt="HidraFacial">
+                            <div class="service-badge">Novidade</div>
+                        </div>
+                        <div class="service-content">
+                            <h3>HidraFacial</h3>
+                            <div class="service-price">A partir de R$ 300</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                75 minutos
+                            </div>
+                            <p>Tratamento 3 em 1: esfoliação, extração e hidratação profunda com soros personalizados.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Limpeza profunda</li>
+                                <li><i class="fas fa-check"></i> Hidratação intensa</li>
+                                <li><i class="fas fa-check"></i> Resultado imediato</li>
+                                <li><i class="fas fa-check"></i> Sem descamação</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um HidraFacial" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tratamentos Corporais -->
+            <div class="category-section" id="corporal">
+                <h2 class="category-title">Tratamentos Corporais</h2>
+                <div class="services-grid">
+                    <div class="service-detail-card" data-category="corporal">
+                        <div class="service-image">
+                            <img src="assets/massagem-modeladora.jpg" alt="Massagem Modeladora">
+                            <div class="service-badge">Mais Procurado</div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Massagem Modeladora</h3>
+                            <div class="service-price">A partir de R$ 150</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                60 minutos
+                            </div>
+                            <p>Massagem específica para modelar o corpo, melhorar circulação e reduzir medidas.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Melhora circulação</li>
+                                <li><i class="fas fa-check"></i> Reduz celulite</li>
+                                <li><i class="fas fa-check"></i> Modela silhueta</li>
+                                <li><i class="fas fa-check"></i> Relaxamento muscular</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Massagem Modeladora" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-card" data-category="corporal">
+                        <div class="service-image">
+                            <img src="assets/drenagem-linfatica.jpg" alt="Drenagem Linfática">
+                        </div>
+                        <div class="service-content">
+                            <h3>Drenagem Linfática</h3>
+                            <div class="service-price">A partir de R$ 120</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                60 minutos
+                            </div>
+                            <p>Massagem suave que estimula o sistema linfático, reduzindo inchaço e toxinas.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Reduz inchaço</li>
+                                <li><i class="fas fa-check"></i> Elimina toxinas</li>
+                                <li><i class="fas fa-check"></i> Melhora circulação</li>
+                                <li><i class="fas fa-check"></i> Relaxamento profundo</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Drenagem Linfática" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-card" data-category="corporal">
+                        <div class="service-image">
+                            <img src="assets/esfoliacao-corporal.jpg" alt="Esfoliação Corporal">
+                        </div>
+                        <div class="service-content">
+                            <h3>Esfoliação Corporal</h3>
+                            <div class="service-price">A partir de R$ 100</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                45 minutos
+                            </div>
+                            <p>Remove células mortas, deixando a pele macia, hidratada e com aparência renovada.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Remove células mortas</li>
+                                <li><i class="fas fa-check"></i> Pele mais macia</li>
+                                <li><i class="fas fa-check"></i> Melhora absorção de cosméticos</li>
+                                <li><i class="fas fa-check"></i> Hidratação profunda</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Esfoliação Corporal" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emagrecimento -->
+            <div class="category-section" id="emagrecimento">
+                <h2 class="category-title">Tratamentos de Emagrecimento</h2>
+                <div class="services-grid">
+                    <div class="service-detail-card" data-category="emagrecimento">
+                        <div class="service-image">
+                            <img src="assets/criolipólise.jpg" alt="Criolipólise">
+                            <div class="service-badge">Mais Eficaz</div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Criolipólise</h3>
+                            <div class="service-price">A partir de R$ 300</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                60 minutos
+                            </div>
+                            <p>Congelamento das células de gordura para redução de gordura localizada sem cirurgia.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Reduz gordura localizada</li>
+                                <li><i class="fas fa-check"></i> Sem cirurgia</li>
+                                <li><i class="fas fa-check"></i> Sem tempo de recuperação</li>
+                                <li><i class="fas fa-check"></i> Resultados duradouros</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Criolipólise" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-card" data-category="emagrecimento">
+                        <div class="service-image">
+                            <img src="assets/lipo-cavitacao.jpg" alt="Lipo de Cavitação">
+                        </div>
+                        <div class="service-content">
+                            <h3>Lipo de Cavitação</h3>
+                            <div class="service-price">A partir de R$ 180</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                50 minutos
+                            </div>
+                            <p>Ultrassom de baixa frequência quebra células de gordura de forma natural e indolor.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Quebra células de gordura</li>
+                                <li><i class="fas fa-check"></i> Procedimento indolor</li>
+                                <li><i class="fas fa-check"></i> Reduz medidas</li>
+                                <li><i class="fas fa-check"></i> Melhora contorno corporal</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Lipo de Cavitação" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-card" data-category="emagrecimento">
+                        <div class="service-image">
+                            <img src="assets/carboxiterapia.jpg" alt="Carboxiterapia">
+                        </div>
+                        <div class="service-content">
+                            <h3>Carboxiterapia</h3>
+                            <div class="service-price">A partir de R$ 150</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                40 minutos
+                            </div>
+                            <p>Aplicação de CO2 medicinal para melhorar circulação e reduzir gordura localizada.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Melhora circulação</li>
+                                <li><i class="fas fa-check"></i> Reduz celulite</li>
+                                <li><i class="fas fa-check"></i> Oxigena tecidos</li>
+                                <li><i class="fas fa-check"></i> Efeito lifting</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Carboxiterapia" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rejuvenescimento -->
+            <div class="category-section" id="rejuvenescimento">
+                <h2 class="category-title">Tratamentos de Rejuvenescimento</h2>
+                <div class="services-grid">
+                    <div class="service-detail-card" data-category="rejuvenescimento">
+                        <div class="service-image">
+                            <img src="assets/radiofrequencia.jpg" alt="Radiofrequência">
+                            <div class="service-badge">Anti-idade</div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Radiofrequência</h3>
+                            <div class="service-price">A partir de R$ 200</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                60 minutos
+                            </div>
+                            <p>Aquecimento controlado estimula colágeno e elastina, combatendo flacidez e rugas.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Combate flacidez</li>
+                                <li><i class="fas fa-check"></i> Reduz rugas</li>
+                                <li><i class="fas fa-check"></i> Estimula colágeno</li>
+                                <li><i class="fas fa-check"></i> Efeito lifting</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Radiofrequência" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-card" data-category="rejuvenescimento">
+                        <div class="service-image">
+                            <img src="assets/laser-co2.jpg" alt="Laser CO2">
+                        </div>
+                        <div class="service-content">
+                            <h3>Laser CO2 Fracionado</h3>
+                            <div class="service-price">A partir de R$ 400</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                45 minutos
+                            </div>
+                            <p>Tecnologia laser para renovação da pele, tratamento de cicatrizes e rugas profundas.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Renovação celular</li>
+                                <li><i class="fas fa-check"></i> Reduz cicatrizes</li>
+                                <li><i class="fas fa-check"></i> Suaviza rugas profundas</li>
+                                <li><i class="fas fa-check"></i> Melhora textura da pele</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um Laser CO2" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-card" data-category="rejuvenescimento">
+                        <div class="service-image">
+                            <img src="assets/ultrassom-microfocado.jpg" alt="Ultrassom Microfocado">
+                        </div>
+                        <div class="service-content">
+                            <h3>Ultrassom Microfocado</h3>
+                            <div class="service-price">A partir de R$ 350</div>
+                            <div class="service-duration">
+                                <i class="fas fa-clock"></i>
+                                90 minutos
+                            </div>
+                            <p>Lifting não cirúrgico que atua nas camadas profundas da pele para rejuvenescimento.</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check"></i> Lifting não cirúrgico</li>
+                                <li><i class="fas fa-check"></i> Atua em camadas profundas</li>
+                                <li><i class="fas fa-check"></i> Resultados progressivos</li>
+                                <li><i class="fas fa-check"></i> Sem tempo de recuperação</li>
+                            </ul>
+                            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um Ultrassom Microfocado" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="services-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Não encontrou o que procura?</h2>
+                <p>Fale conosco no WhatsApp e nossa equipe te ajudará a escolher o melhor tratamento</p>
+                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de informações sobre os procedimentos estéticos" class="btn btn-whatsapp btn-large" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Falar com Especialista
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/logo-white.png" alt="La Vaidade">
+                        <h3>La Vaidade</h3>
+                    </div>
+                    <p>Clínica especializada em estética facial e corporal. Também oferecemos aluguel de equipamentos profissionais para estetas.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Procedimentos</h4>
+                    <ul>
+                        <li><a href="#facial">Tratamentos Faciais</a></li>
+                        <li><a href="#corporal">Tratamentos Corporais</a></li>
+                        <li><a href="#emagrecimento">Emagrecimento</a></li>
+                        <li><a href="#rejuvenescimento">Rejuvenescimento</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Para Profissionais</h4>
+                    <ul>
+                        <li><a href="equipamentos.html">Catálogo de Equipamentos</a></li>
+                        <li><a href="equipamentos.html#locacao">Planos de Locação</a></li>
+                        <li><a href="index.html#contato">Seja um Parceiro</a></li>
+                        <li><a href="index.html#contato">Suporte Técnico</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>(11) 99999-9999</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@lavaidade.com.br</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rua da Beleza, 123 - São Paulo, SP</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Seg a Sex: 8h às 18h | Sáb: 8h às 14h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Vaidade. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#" target="_blank">Política de Privacidade</a>
+                    <a href="#" target="_blank">Termos de Uso</a>
+                    <a href="#" target="_blank">Política de Cancelamento</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Fale Conosco</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

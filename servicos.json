@@ -1,0 +1,98 @@
+{
+  "locacoes": [
+    {
+      "nome": "Criofrequência",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "duracao": "12h",
+      "preco": "R$ 800"
+    },
+    {
+      "nome": "Endolaser",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "duracao": "12h",
+      "preco": "R$ 1.800"
+    },
+    {
+      "nome": "Picoway",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "duracao": "12h",
+      "preco": "R$ 800"
+    },
+    {
+      "nome": "Lavieen",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "duracao": "12h",
+      "preco": "R$ 2.100"
+    },
+    {
+      "nome": "Ulthera",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "duracao": "12h",
+      "preco": "R$ 300 + R$ 1,50 por DSP"
+    },
+    {
+      "nome": "Soprano Ice",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "duracao": "12h",
+      "preco": "R$ 1.000"
+    },
+    {
+      "nome": "Criolipólise",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "duracao": "12h",
+      "preco": "R$ 600"
+    }
+  ],
+  "procedimentos_esteticos": [
+    {
+      "nome": "I-Lipo",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 100"
+    },
+    {
+      "nome": "Eletroterapia",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 100"
+    },
+    {
+      "nome": "Radiofrequência",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 100"
+    },
+    {
+      "nome": "Massagem com ventosa",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 160"
+    },
+    {
+      "nome": "Lipocavitação",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 100"
+    },
+    {
+      "nome": "Ulthera",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 2,50 por disparo"
+    },
+    {
+      "nome": "Drenagem linfática",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 120"
+    },
+    {
+      "nome": "Limpeza de pele",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 150"
+    },
+    {
+      "nome": "Criolipólise",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 150 por acoplada"
+    },
+    {
+      "nome": "Vácuoterapia",
+      "descricao": "[INSERIR DESCRIÇÃO AQUI]",
+      "preco": "R$ 100"
+    }
+  ]
+}

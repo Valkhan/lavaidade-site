@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel de Equipamentos - La Vaidade</title>
+    <meta name="description" content="Aluguel de equipamentos profissionais de estética. Criolipólise, radiofrequência, laser e muito mais para profissionais da beleza.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/equipments.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="assets/logo.png" alt="La Vaidade" class="logo">
+                    <span class="brand-name">La Vaidade</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="servicos.html" class="nav-link">Procedimentos</a></li>
+                        <li><a href="equipamentos.html" class="nav-link active">Equipamentos</a></li>
+                        <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Reservar
+                    </a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-background">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Aluguel de Equipamentos</h1>
+                <p>Equipamentos profissionais de última geração para estetas e clínicas</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Início</a>
+                    <span>/</span>
+                    <span>Equipamentos</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="rental-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por que alugar conosco?</h2>
+                <p>Vantagens exclusivas para profissionais da estética</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Equipamentos Certificados</h3>
+                    <p>Todos os equipamentos possuem certificação ANVISA e garantia de qualidade</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Manutenção Inclusa</h3>
+                    <p>Suporte técnico completo e manutenção preventiva inclusos no aluguel</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Treinamento Gratuito</h3>
+                    <p>Capacitação completa para uso correto e seguro dos equipamentos</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Flexibilidade</h3>
+                    <p>Contratos flexíveis e possibilidade de troca de equipamentos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Categories -->
+    <section class="equipment-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="criolipólise">Criolipólise</button>
+                <button class="filter-btn" data-category="radiofrequencia">Radiofrequência</button>
+                <button class="filter-btn" data-category="laser">Laser</button>
+                <button class="filter-btn" data-category="ultrassom">Ultrassom</button>
+                <button class="filter-btn" data-category="outros">Outros</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Grid -->
+    <section class="equipment-grid-section">
+        <div class="container">
+            <div class="equipment-grid">
+                <!-- Criolipólise -->
+                <div class="equipment-card" data-category="criolipólise">
+                    <div class="equipment-image">
+                        <img src="assets/equipment-criolipólise-1.jpg" alt="Criolipólise Premium">
+                        <div class="equipment-badge">Mais Alugado</div>
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Criolipólise Premium</h3>
+                        <div class="equipment-price">R$ 800/mês</div>
+                        <div class="equipment-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-thermometer-half"></i>
+                                <span>-10°C a +45°C</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Sessões de 35-60min</span>
+                            </div>
+                        </div>
+                        <p>Equipamento de criolipólise de última geração com 4 aplicadores diferentes e sistema de resfriamento controlado.</p>
+                        <button class="btn btn-outline equipment-details-btn" data-equipment="criolipólise-premium">
+                            <i class="fas fa-info-circle"></i>
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="equipment-card" data-category="criolipólise">
+                    <div class="equipment-image">
+                        <img src="assets/equipment-criolipólise-2.jpg" alt="Criolipólise Compacta">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Criolipólise Compacta</h3>
+                        <div class="equipment-price">R$ 500/mês</div>
+                        <div class="equipment-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-thermometer-half"></i>
+                                <span>-8°C a +40°C</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Sessões de 35min</span>
+                            </div>
+                        </div>
+                        <p>Versão compacta ideal para consultórios menores, com tecnologia eficaz e preço acessível.</p>
+                        <button class="btn btn-outline equipment-details-btn" data-equipment="criolipólise-compacta">
+                            <i class="fas fa-info-circle"></i>
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Radiofrequência -->
+                <div class="equipment-card" data-category="radiofrequencia">
+                    <div class="equipment-image">
+                        <img src="assets/equipment-radiofrequencia-1.jpg" alt="Radiofrequência Multipolar">
+                        <div class="equipment-badge">Novidade</div>
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Radiofrequência Multipolar</h3>
+                        <div class="equipment-price">R$ 600/mês</div>
+                        <div class="equipment-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>1MHz - 6MHz</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Sessões de 40-60min</span>
+                            </div>
+                        </div>
+                        <p>Radiofrequência multipolar para tratamento facial e corporal, com 5 aplicadores diferentes.</p>
+                        <button class="btn btn-outline equipment-details-btn" data-equipment="radiofrequencia-multipolar">
+                            <i class="fas fa-info-circle"></i>
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="equipment-card" data-category="radiofrequencia">
+                    <div class="equipment-image">
+                        <img src="assets/equipment-radiofrequencia-2.jpg" alt="Radiofrequência Fracionada">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Radiofrequência Fracionada</h3>
+                        <div class="equipment-price">R$ 750/mês</div>
+                        <div class="equipment-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>Tecnologia Frax</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Sessões de 30-45min</span>
+                            </div>
+                        </div>
+                        <p>Tecnologia fracionada para rejuvenescimento facial intenso e tratamento de cicatrizes.</p>
+                        <button class="btn btn-outline equipment-details-btn" data-equipment="radiofrequencia-fracionada">
+                            <i class="fas fa-info-circle"></i>
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Laser -->
+                <div class="equipment-card" data-category="laser">
+                    <div class="equipment-image">
+                        <img src="assets/equipment-laser-1.jpg" alt="Laser CO2 Fracionado">
+                        <div class="equipment-badge">Premium</div>
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Laser CO2 Fracionado</h3>
+                        <div class="equipment-price">R$ 1200/mês</div>
+                        <div class="equipment-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-laser"></i>
+                                <span>10.600nm</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Sessões de 30-60min</span>
+                            </div>
+                        </div>
+                        <p>Laser CO2 fracionado para renovação celular, tratamento de cicatrizes e rejuvenescimento.</p>
+                        <button class="btn btn-outline equipment-details-btn" data-equipment="laser-co2">
+                            <i class="fas fa-info-circle"></i>
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ultrassom -->
+                <div class="equipment-card" data-category="ultrassom">
+                    <div class="equipment-image">
+                        <img src="assets/equipment-ultrassom-1.jpg" alt="Ultrassom Microfocado">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Ultrassom Microfocado</h3>
+                        <div class="equipment-price">R$ 900/mês</div>
+                        <div class="equipment-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-sound"></i>
+                                <span>4MHz - 7MHz</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Sessões de 60-90min</span>
+                            </div>
+                        </div>
+                        <p>Ultrassom microfocado para lifting não cirúrgico e rejuvenescimento profundo.</p>
+                        <button class="btn btn-outline equipment-details-btn" data-equipment="ultrassom-microfocado">
+                            <i class="fas fa-info-circle"></i>
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="equipment-card" data-category="ultrassom">
+                    <div class="equipment-image">
+                        <img src="assets/equipment-ultrassom-2.jpg" alt="Ultracavitação">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Ultracavitação</h3>
+                        <div class="equipment-price">R$ 400/mês</div>
+                        <div class="equipment-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-sound"></i>
+                                <span>40kHz</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Sessões de 40min</span>
+                            </div>
+                        </div>
+                        <p>Ultracavitação para quebra de gordura localizada de forma não invasiva.</p>
+                        <button class="btn btn-outline equipment-details-btn" data-equipment="ultracavitacao">
+                            <i class="fas fa-info-circle"></i>
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Outros -->
+                <div class="equipment-card" data-category="outros">
+                    <div class="equipment-image">
+                        <img src="assets/equipment-endermoterapia.jpg" alt="Endermoterapia">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Endermoterapia</h3>
+                        <div class="equipment-price">R$ 550/mês</div>
+                        <div class="equipment-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-hand-paper"></i>
+                                <span>Massagem Mecânica</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Sessões de 45min</span>
+                            </div>
+                        </div>
+                        <p>Sistema de massagem mecânica para redução de celulite e modelagem corporal.</p>
+                        <button class="btn btn-outline equipment-details-btn" data-equipment="endermoterapia">
+                            <i class="fas fa-info-circle"></i>
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="equipment-card" data-category="outros">
+                    <div class="equipment-image">
+                        <img src="assets/equipment-pressoterapia.jpg" alt="Pressoterapia">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Pressoterapia</h3>
+                        <div class="equipment-price">R$ 300/mês</div>
+                        <div class="equipment-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-compress-arrows-alt"></i>
+                                <span>Compressão Pneumática</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Sessões de 30min</span>
+                            </div>
+                        </div>
+                        <p>Sistema de compressão pneumática para drenagem linfática e redução de edemas.</p>
+                        <button class="btn btn-outline equipment-details-btn" data-equipment="pressoterapia">
+                            <i class="fas fa-info-circle"></i>
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Plans -->
+    <section id="locacao" class="rental-plans">
+        <div class="container">
+            <div class="section-header">
+                <h2>Planos de Locação</h2>
+                <p>Escolha o plano que melhor se adapta ao seu negócio</p>
+            </div>
+            
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Básico</h3>
+                        <div class="plan-price">
+                            <span class="price">R$ 300-500</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 1 Equipamento</li>
+                            <li><i class="fas fa-check"></i> Manutenção inclusa</li>
+                            <li><i class="fas fa-check"></i> Treinamento básico</li>
+                            <li><i class="fas fa-check"></i> Suporte técnico</li>
+                            <li><i class="fas fa-times"></i> Troca de equipamento</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no plano Básico de locação" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Contratar
+                    </a>
+                </div>
+
+                <div class="plan-card featured">
+                    <div class="plan-badge">Mais Popular</div>
+                    <div class="plan-header">
+                        <h3>Profissional</h3>
+                        <div class="plan-price">
+                            <span class="price">R$ 800-1200</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 2-3 Equipamentos</li>
+                            <li><i class="fas fa-check"></i> Manutenção inclusa</li>
+                            <li><i class="fas fa-check"></i> Treinamento completo</li>
+                            <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                            <li><i class="fas fa-check"></i> 1 Troca por mês</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no plano Profissional de locação" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Contratar
+                    </a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Premium</h3>
+                        <div class="plan-price">
+                            <span class="price">R$ 1500+</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 5+ Equipamentos</li>
+                            <li><i class="fas fa-check"></i> Manutenção inclusa</li>
+                            <li><i class="fas fa-check"></i> Treinamento avançado</li>
+                            <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                            <li><i class="fas fa-check"></i> Trocas ilimitadas</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no plano Premium de locação" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Contratar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="equipment-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para expandir seu negócio?</h2>
+                <p>Entre em contato e descubra como nossos equipamentos podem impulsionar sua clínica</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de informações sobre aluguel de equipamentos" class="btn btn-whatsapp btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Falar com Consultor
+                    </a>
+                    <a href="#locacao" class="btn btn-outline btn-large">
+                        <i class="fas fa-eye"></i>
+                        Ver Planos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Details Modal -->
+    <div class="modal" id="equipmentModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <div class="modal-price" id="modalPrice"></div>
+                    <div class="modal-specs" id="modalSpecs"></div>
+                    <div class="modal-description" id="modalDescription"></div>
+                    <div class="modal-features" id="modalFeatures"></div>
+                    <div class="modal-actions">
+                        <a href="#" class="btn btn-primary" id="modalWhatsappBtn" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Reservar Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/logo-white.png" alt="La Vaidade">
+                        <h3>La Vaidade</h3>
+                    </div>
+                    <p>Clínica especializada em estética facial e corporal. Também oferecemos aluguel de equipamentos profissionais para estetas.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Procedimentos</h4>
+                    <ul>
+                        <li><a href="servicos.html#facial">Tratamentos Faciais</a></li>
+                        <li><a href="servicos.html#corporal">Tratamentos Corporais</a></li>
+                        <li><a href="servicos.html#emagrecimento">Emagrecimento</a></li>
+                        <li><a href="servicos.html#rejuvenescimento">Rejuvenescimento</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Para Profissionais</h4>
+                    <ul>
+                        <li><a href="#equipamentos">Catálogo de Equipamentos</a></li>
+                        <li><a href="#locacao">Planos de Locação</a></li>
+                        <li><a href="index.html#contato">Seja um Parceiro</a></li>
+                        <li><a href="index.html#contato">Suporte Técnico</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>(11) 99999-9999</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@lavaidade.com.br</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rua da Beleza, 123 - São Paulo, SP</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Seg a Sex: 8h às 18h | Sáb: 8h às 14h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Vaidade. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#" target="_blank">Política de Privacidade</a>
+                    <a href="#" target="_blank">Termos de Uso</a>
+                    <a href="#" target="_blank">Política de Cancelamento</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Fale Conosco</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/equipments.js"></script>
+</body>
+</html>
