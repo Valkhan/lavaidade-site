@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
             
-            const equipamentosGrid = equipamentosSection.querySelector('#equipamentos-grid');
-              // Carregar dados dos equipamentos para o modal
+            const equipamentosGrid = equipamentosSection.querySelector('#equipamentos-grid');            // Carregar dados dos equipamentos para o modal
             equipmentData = {};
             data.locacoes.forEach((equipamento) => {
                 const key = equipamento.nome.toLowerCase().replace(/\s+/g, '-').replace(/[áàãâ]/g, 'a').replace(/[éê]/g, 'e').replace(/[íî]/g, 'i').replace(/[óôõ]/g, 'o').replace(/[úû]/g, 'u').replace(/ç/g, 'c');
@@ -56,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     price: equipamento.preco,
                     image: equipamento.imagem,
                     description: equipamento.descricao,
+                    duration: equipamento.duracao,
                     whatsappText: `Olá! Gostaria de alugar ${equipamento.nome}`
                 };
             });
@@ -101,34 +101,23 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (index === 1) badge = '<div class="equipment-badge">Novidade</div>';
         else if (equipment.nome.includes('Premium') || equipment.nome.includes('Ulthera') || equipment.nome.includes('Picoway')) {
             badge = '<div class="equipment-badge">Premium</div>';
-        }
-        
-        // Criar especificações básicas com base nos dados disponíveis
-        let specs = '';
-        specs += `
-            <div class="spec-item">
-                <i class="fas fa-clock"></i>
-                <span>Locação: ${equipment.duracao}</span>
-            </div>
-            <div class="spec-item">
-                <i class="fas fa-certificate"></i>
-                <span>Certificado ANVISA</span>
-            </div>
-        `;
-        
+        }        // Layout do card focado em título, preço e tempo de locação
         card.innerHTML = `
             <div class="equipment-image">
                 <img src="${equipment.imagem}" alt="${equipment.nome}" loading="lazy">
                 ${badge}
             </div>
             <div class="equipment-content">
-                <h3>${equipment.nome}</h3>
-                <div class="equipment-price">${equipment.preco}/dia</div>
-                <div class="equipment-specs">
-                    ${specs}
+                <h3 class="equipment-title">${equipment.nome}</h3>
+                <div class="equipment-price-section">
+                    <div class="equipment-price">${equipment.preco}</div>
+                    <div class="equipment-price-period">por dia</div>
                 </div>
-                <p>${equipment.descricao}</p>
-                <button class="btn btn-outline equipment-details-btn" data-equipment="${equipment.nome.toLowerCase().replace(/\s+/g, '-').replace(/[áàãâ]/g, 'a').replace(/[éê]/g, 'e').replace(/[íî]/g, 'i').replace(/[óôõ]/g, 'o').replace(/[úû]/g, 'u').replace(/ç/g, 'c')}">
+                <div class="equipment-duration">
+                    <i class="fas fa-clock"></i>
+                    <span>Locação de ${equipment.duracao}</span>
+                </div>
+                <button class="btn btn-primary equipment-details-btn" data-equipment="${equipment.nome.toLowerCase().replace(/\s+/g, '-').replace(/[áàãâ]/g, 'a').replace(/[éê]/g, 'e').replace(/[íî]/g, 'i').replace(/[óôõ]/g, 'o').replace(/[úû]/g, 'u').replace(/ç/g, 'c')}">
                     <i class="fas fa-info-circle"></i>
                     Ver Detalhes
                 </button>
@@ -207,17 +196,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Modal functionality
     function openEquipmentModal(equipmentId) {
         const equipment = equipmentData[equipmentId];
-        if (!equipment || !modal) return;
-
-        // Populate modal content
+        if (!equipment || !modal) return;        // Populate modal content
         const modalTitle = document.getElementById('modalTitle');
         const modalPrice = document.getElementById('modalPrice');
+        const modalDuration = document.getElementById('modalDuration');
         const modalImage = document.getElementById('modalImage');
         const modalDescription = document.getElementById('modalDescription');
-        const modalWhatsapp = document.getElementById('modalWhatsapp');
+        const modalWhatsapp = document.getElementById('modalWhatsappBtn');
 
         if (modalTitle) modalTitle.textContent = equipment.title;
-        if (modalPrice) modalPrice.textContent = equipment.price;
+        if (modalPrice) modalPrice.textContent = `${equipment.price} por dia`;
+        if (modalDuration) {
+            modalDuration.innerHTML = `
+                <i class="fas fa-clock"></i>
+                <span>Período de locação: ${equipment.duration}</span>
+            `;
+        }
         if (modalImage) {
             modalImage.src = equipment.image;
             modalImage.alt = equipment.title;
