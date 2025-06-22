@@ -1,105 +1,74 @@
-### 🔍 **Análise do site Lavaidade**
+### 🔍 Avaliação do site atual – **La Vaidade**
+
+**URL:** [www.lavaidade.com.br](https://www.lavaidade.com.br)
 
 ---
 
-#### ✅ **1. Propósito e identidade da empresa**
+### 🧾 **Resumo da Empresa (com base no site)**
 
-A empresa "Lavaidade" oferece serviços de estética automotiva e estética pessoal, atuando como um centro de cuidados para carros e pessoas, o que é reforçado no nome (lavagem e vaidade). Essa proposta de valor é boa, mas **mal comunicada no site atual**.
+**La Vaidade** é uma clínica estética e locadora de equipamentos voltada para profissionais da área de beleza e estética. Oferece **procedimentos estéticos corporais e faciais**, além de **aluguel de equipamentos profissionais** como criolipólise, alta frequência e vacuoterapia. A marca busca atender tanto clientes finais quanto profissionais da estética.
 
----
+**Público-alvo:**
 
-#### 🔍 **2. Análise técnica e de usabilidade do site atual**
-
-##### 📌 **Página inicial ([https://www.lavaidade.com.br](https://www.lavaidade.com.br))**
-
-* Layout antigo e genérico, feito via Wix.
-* Paleta de cores escura com fontes difíceis de ler.
-* Sem hierarquia clara de informações.
-* Sem destaque imediato para serviços ou diferenciais.
-* Faltam chamadas de ação claras (CTAs).
-* O nome "Lavaidade" não é bem explorado como marca forte.
-
-##### 📌 **Página de agendamento online ([https://www.lavaidade.com.br/book-online](https://www.lavaidade.com.br/book-online))**
-
-* Lista longa e confusa de serviços.
-* Não há filtro por categoria (ex: estética automotiva x estética pessoal).
-* UX ruim para quem quer achar um serviço específico.
-* O formulário de agendamento é básico e genérico.
-
-##### 📌 **Página de estética ([https://www.lavaidade.com.br/agendamento-de-est%C3%A9tica](https://www.lavaidade.com.br/agendamento-de-est%C3%A9tica))**
-
-* Repetitiva.
-* Mesmos problemas de UX: falta de categorias, organização, layout visualmente fraco.
+* Clientes que buscam estética facial e corporal (autoestima, emagrecimento, rejuvenescimento).
+* Profissionais da estética que alugam equipamentos para atendimento próprio.
 
 ---
 
-### 🧠 **Resumo da empresa (para base de comunicação moderna)**
+### 📉 Pontos fracos do site atual
 
-**Lavaidade** é um espaço inovador que une **estética automotiva** e **estética pessoal**, oferecendo desde lavagem premium e vitrificação até limpeza de pele e massagem relaxante. Nosso foco é proporcionar um cuidado completo com o que você tem de mais valioso: seu carro e você mesmo.
-
-Com uma estrutura que valoriza o conforto, a praticidade e o cuidado em cada detalhe, nosso objetivo é transformar sua rotina de autocuidado em uma experiência completa.
-
----
-
-### 🎯 **Recomendações para o novo site**
-
-1. **Landing page clara e com impacto visual**
-
-   * Hero banner com slogan + imagem forte
-   * Chamada para agendar com botões destacados
-   * Vitrine de serviços em destaque (ex: vitrificação, depilação, combo carro & pessoa)
-
-2. **Serviços divididos por categoria**
-
-   * Estética automotiva
-   * Estética pessoal
-   * Combos promocionais
-   * Cada serviço com: imagem, descrição, preço e botão “Agendar”
-
-3. **Agendamento simplificado**
-
-   * Interface por categoria > serviço > data > pagamento (ou WhatsApp)
-
-4. **Galeria antes e depois**
-
-   * Resultados reais para gerar confiança
-
-5. **Depoimentos e avaliações**
-
-   * Integração com Google Reviews
-
-6. **Versão mobile otimizada**
-
-   * 80% dos acessos são mobile
+* **Layout desatualizado**: visual ultrapassado, com pouca hierarquia visual e excesso de espaços vazios.
+* **Experiência do usuário fraca**: agendamento confuso, menu redundante, excesso de cliques até encontrar os serviços.
+* **Sem foco em conversão**: não há destaques visuais para principais serviços ou diferenciais.
+* **Ausência de galeria categorizada**: os serviços aparecem em lista única e desorganizada.
+* **Sem identidade clara de marca**: cores, fontes e estilo genéricos.
 
 ---
 
-### ✍️ **Prompt para o Claude Sonnet 4 – recriar site moderno da Lavaidade**
+### ✅ Pontos positivos
 
-```plaintext
-Você é um web designer especializado em UX e design responsivo. Recrie o site da empresa Lavaidade, um centro de estética automotiva e pessoal, com foco em modernidade, clareza na comunicação e organização por categorias de serviço.
-
-**Objetivo**: Criar uma landing page moderna com:
-1. Hero banner com slogan e imagem impactante.
-2. Destaques dos principais serviços (ex: vitrificação, depilação, limpeza facial).
-3. Galeria com serviços organizados por categoria:
-   - Estética automotiva
-   - Estética pessoal
-   - Combos e promoções
-
-**Requisitos**:
-- Layout responsivo (mobile-first)
-- Paleta de cores clara e elegante
-- Tipografia moderna e legível
-- CTAs visíveis: “Agende agora”, “Veja mais”, “Fale conosco”
-- Integração com agendamento online
-- Sessão de antes e depois com galeria
-- Sessão de depoimentos (integração com Google Reviews ou simulada)
-- Rodapé com informações de contato, mapa, redes sociais
-
-Use estrutura HTML/CSS moderna (pode sugerir uso de frameworks como Tailwind ou Bootstrap) e, se possível, forneça esboço visual da hierarquia (wireframe).
-```
+* Usa Wix, o que facilita a atualização do conteúdo.
+* Integração com sistema de agendamento online já funcional.
+* Serviços bem descritos (apesar de mal organizados).
 
 ---
 
-Se quiser, posso converter esse prompt direto em HTML+Tailwind para base de implementação. Só pedir.
+### 🧭 Diretrizes para o novo site
+
+**Objetivo:** Transformar o site em uma vitrine moderna e funcional para atrair e converter clientes.
+
+#### 🧩 Estrutura sugerida para o novo site
+
+1. **Home (Página Inicial)**
+
+   * Banner chamativo com CTA ("Agende seu procedimento agora").
+   * Destaque dos principais serviços (3–5 cards clicáveis).
+   * Chamada para aluguel de equipamentos com botão "Veja os equipamentos".
+   * Depoimentos reais + selos de confiança.
+   * Chamada para agendamento com botão fixo ou visível.
+
+2. **Serviços Estéticos (Galeria por categoria)**
+
+   * Categorias: Facial, Corporal, Redução de Medidas, Rejuvenescimento.
+   * Cada serviço com foto, nome, descrição e botão "Agendar".
+
+3. **Aluguel de Equipamentos**
+
+   * Lista com imagem, função do equipamento, valor de locação e botão "Reservar".
+
+4. **Agendamento Online**
+
+   * Página dedicada e organizada por tipo de serviço.
+
+5. **Sobre nós**
+
+   * História da empresa, missão, equipe (opcional).
+
+6. **Contato**
+
+   * Formulário, mapa, WhatsApp, redes sociais.
+
+7. **Rodapé**
+
+   * Links rápidos, telefone, política de cancelamento, redes sociais.
+
